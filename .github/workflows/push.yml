@@ -32,6 +32,12 @@ jobs:
       - name: Push image
         run: docker push asia-south1-docker.pkg.dev/eremote-hire-website-405811/testing/nextjs
 
+      - name: Deploy to Cloud Run
+        uses: google-github-actions/deploy-cloudrun@v2.4.1
+
+      - name: Deploy to Cloud Run
+        run: gcloud run deploy nextjs --image asia-south1-docker.pkg.dev/eremote-hire-website-405811/testing/nextjs --region asia-south1 --platform managed --allow-unauthenticated
+
       # - name: Set up Docker Buildx
       #   uses: docker/setup-buildx-action@v3.3.0
 
