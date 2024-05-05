@@ -34,6 +34,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: asia-south1-docker.pkg.dev/eremote-hire-website-405811/testing
+          tags: asia-south1-docker.pkg.dev/eremote-hire-website-405811/testing/nextjs
           cache-from: type=gha
           cache-to: type=gha,mode=max
