@@ -19,5 +19,7 @@ jobs:
         uses: docker/build-push-action@v5.3.0
         with:
           context: .
+          tags: asia-south1-docker.pkg.dev/eremote-hire-website-405811/testing/nextjs
+          push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max

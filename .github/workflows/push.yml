@@ -1,9 +1,13 @@
-name: checking Docker Image is Building or not in on PR to main
+name: build and push image to GCR and deploy to Cloud Run
 
 on:
   push:
     branches:
-      - main
+      - asdf
+
+env:
+  PROJECT_ID: eremote-hire-website-405811
+  GAR_TAG: asia-south1-docker.pkg.dev/eremote-hire-website-405811/testing/nextjs
 
 jobs:
   build:
