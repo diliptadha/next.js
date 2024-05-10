@@ -3,7 +3,7 @@ name: build and push image to GCR and deploy to Cloud Run
 on:
   push:
     branches:
-      - asdf
+      - main
 
 env:
   PROJECT_ID: eremote-hire-website-405811
